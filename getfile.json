@@ -4,25 +4,26 @@
   
 "plugins": {
   
-"AddedMe.lua":"[ملف امر منو ضافني](https://t.me/ExpJebas/6)",
+"AddedMe.lua":"[ملف امر منو ضافني](https://t.me/ExpProx/742)",
   
-"TagAll.lua":"[ملف تاك منفصل للاعضاء](https://t.me/ExpJebas/7)",
+"TagAll.lua":"[ملف تاك منفصل للاعضاء](https://t.me/ExpProx/743)",
   
-"TagAdmins.lua":"[ملف تاك منفصل للمشرفين](https://t.me/ExpJebas/8)",
+"TagAdmins.lua":"[ملف تاك منفصل للمشرفين](https://t.me/ExpProx/744)",
   
-"ReplyBot.lua":"[ملف الردود الخاص بالسورس](https://t.me/ExpJebas/13)",
+"ReplyBot.lua":"[ملف الردود الخاص بالسورس](https://t.me/ExpProx/749)",
       
-"MuteNames.lua":"[ملف كتم الاسماء للمجموعات](https://t.me/ExpJebas/10)",
+"MuteNames.lua":"[ملف كتم الاسماء للمجموعات](https://t.me/ExpProx/745)",
   
-"ProNames.lua":"[ملف وضع التوحيد للمجموعات](https://t.me/ExpJebas/11)",
+"ProNames.lua":"[ملف وضع التوحيد للمجموعات](https://t.me/ExpProx/747)",
   
-"ChangeName.lua":"[ملف التنبيه لتغيير الاسم](https://t.me/ExpJebas4)",
+"ChangeName.lua":"[ملف التنبيه لتغيير الاسم](https://t.me/ExpProx/740)",
     
-"ChangeUser.lua":"[ملف التنبيه لتغيير المعرف](https://t.me/ExpJebas/3)",
+"ChangeUser.lua":"[ملف التنبيه لتغيير المعرف](https://t.me/ExpProx/741)",
   
-"ChangePhoto.lua":"[ملف التنبيه لتغيير الصوره](https://t.me/ExpJebas/2)",
+"ChangePhoto.lua":"[ملف التنبيه لتغيير الصوره](https://t.me/ExpProx/739)",
   
-"AutoFile.lua":"[ملف النسخ الاحتياطيه التلقائيه](https://t.me/ExpJebas/12)",
+"AutoFile.lua":"[ملف النسخ الاحتياطيه التلقائيه](https://t.me/ExpProx/748)",
+  
 }
   
 }
