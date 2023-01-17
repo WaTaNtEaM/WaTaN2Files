@@ -3,30 +3,30 @@ local text = msg.content_.text_
 if Sudo(msg) then
 if text == 'تفعيل النسخه التلقائيه' or text == 'تفعيل جلب نسخه الكروبات' or text == 'تفعيل عمل نسخه للمجموعات' then   
 Dev_Abs(msg.chat_id_,msg.id_, 1, "⌁︙تم تفعيل جلب نسخة الكروبات التلقائيه\n⌁︙سيتم ارسال نسخه تلقائيه للكروبات كل يوم الى خاص المطور الاساسي", 1, 'md')
-DevAbs:del(WaTaN2.."Abs:Lock:AutoFile")
+DevAbs:del(DevProx.."Abs:Lock:AutoFile")
 end
 if text == 'تعطيل النسخه التلقائيه' or text == 'تعطيل جلب نسخه الكروبات' or text == 'تعطيل عمل نسخه للمجموعات' then  
 Dev_Abs(msg.chat_id_,msg.id_, 1, "⌁︙تم تعطيل جلب نسخة الكروبات التلقائيه", 1, 'md')
-DevAbs:set(WaTaN2.."Abs:Lock:AutoFile",true) 
+DevAbs:set(DevProx.."Abs:Lock:AutoFile",true) 
 end 
 end
 
-if (text and not DevAbs:get(WaTaN2.."Abs:Lock:AutoFile")) then
-Time = DevAbs:get(WaTaN2.."Abs:AutoFile:Time")
+if (text and not DevAbs:get(DevProx.."Abs:Lock:AutoFile")) then
+Time = DevAbs:get(DevProx.."Abs:AutoFile:Time")
 if Time then 
 if Time ~= os.date("%x") then 
-local list = DevAbs:smembers(WaTaN2..'Abs:Groups') 
-local BotName = (DevAbs:get(WaTaN2.."Abs:NameBot") or 'بروكس')
-local GetJson = '{"BotId": '..WaTaN2..',"BotName": "'..BotName..'","GroupsList":{'  
+local list = DevAbs:smembers(DevProx..'Abs:Groups') 
+local BotName = (DevAbs:get(DevProx.."Abs:NameBot") or 'بروكس')
+local GetJson = '{"BotId": '..DevProx..',"BotName": "'..BotName..'","GroupsList":{'  
 for k,v in pairs(list) do 
-LinkGroups = DevAbs:get(WaTaN2.."Abs:Groups:Links"..v)
-Welcomes = DevAbs:get(WaTaN2..'Abs:Groups:Welcomes'..v) or ''
-AbsConstructors = DevAbs:smembers(WaTaN2..'Abs:AbsConstructor:'..v)
-BasicConstructors = DevAbs:smembers(WaTaN2..'Abs:BasicConstructor:'..v)
-Constructors = DevAbs:smembers(WaTaN2..'Abs:Constructor:'..v)
-Managers = DevAbs:smembers(WaTaN2..'Abs:Managers:'..v)
-Admis = DevAbs:smembers(WaTaN2..'Abs:Admins:'..v)
-Vips = DevAbs:smembers(WaTaN2..'Abs:VipMem:'..v)
+LinkGroups = DevAbs:get(DevProx.."Abs:Groups:Links"..v)
+Welcomes = DevAbs:get(DevProx..'Abs:Groups:Welcomes'..v) or ''
+AbsConstructors = DevAbs:smembers(DevProx..'Abs:AbsConstructor:'..v)
+BasicConstructors = DevAbs:smembers(DevProx..'Abs:BasicConstructor:'..v)
+Constructors = DevAbs:smembers(DevProx..'Abs:Constructor:'..v)
+Managers = DevAbs:smembers(DevProx..'Abs:Managers:'..v)
+Admis = DevAbs:smembers(DevProx..'Abs:Admins:'..v)
+Vips = DevAbs:smembers(DevProx..'Abs:VipMem:'..v)
 if k == 1 then
 GetJson = GetJson..'"'..v..'":{'
 else
@@ -104,21 +104,21 @@ end
 GetJson = GetJson..'"Welcomes":"'..Welcomes..'"}'
 end
 GetJson = GetJson..'}}'
-local File = io.open('./'..WaTaN2..'.json', "w")
+local File = io.open('./'..DevProx..'.json', "w")
 File:write(GetJson)
 File:close()
 local abbas = 'https://api.telegram.org/bot' .. TokenBot .. '/sendDocument'
-local curl = 'curl "' .. abbas .. '" -F "chat_id='..DevId..'" -F "document=@'..WaTaN2..'.json' .. '" -F "caption=⌁︙يحتوي الملف على ↫ '..#list..' مجموعه"'
+local curl = 'curl "' .. abbas .. '" -F "chat_id='..DevId..'" -F "document=@'..DevProx..'.json' .. '" -F "caption=⌁︙يحتوي الملف على ↫ '..#list..' مجموعه"'
 io.popen(curl)
-io.popen('fm -fr '..WaTaN2..'.json')
-DevAbs:set(WaTaN2.."Abs:AutoFile:Time",os.date("%x"))
+io.popen('fm -fr '..DevProx..'.json')
+DevAbs:set(DevProx.."Abs:AutoFile:Time",os.date("%x"))
 end
 else 
-DevAbs:set(WaTaN2.."Abs:AutoFile:Time",os.date("%x"))
+DevAbs:set(DevProx.."Abs:AutoFile:Time",os.date("%x"))
 end
 end
 
 end
 return {
-WaTaN2 = AutoFile
+DevProx = AutoFile
 }
